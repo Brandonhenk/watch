@@ -1,4 +1,4 @@
-package edu.jalc.watch;
+package edu.jalc.watch.interfaces;
 
 public interface Lightable{
   public void light();
