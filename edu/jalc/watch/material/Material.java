@@ -1,9 +1,16 @@
 package edu.jalc.watch.material;
+import edu.jalc.watch.interfaces.Detachable;
+import edu.jalc.watch.interfaces.Attachable;
 
 public class Material implements Detachable, Attachable{
 
   private MaterialType materialtype;
   private MaterialColor materialcolor;
+
+  private Material(){
+    this.materialtype = null;
+    this.materialcolor = null;
+  }
 
   public Material(MaterialType materialtype, MaterialColor materialcolor){
     this.setMaterialType(materialtype);
@@ -31,4 +38,5 @@ public class Material implements Detachable, Attachable{
   public void detach(){System.out.println("Detach watch");}
 
   public void attach(){System.out.println("Attach watch");}
+  
 }
