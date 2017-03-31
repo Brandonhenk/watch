@@ -1,6 +1,6 @@
 package edu.jalc.watch.material;
 
-public class Material{
+public class Material implements Detachable, Attachable{
 
   private MaterialType materialtype;
   private MaterialColor materialcolor;
