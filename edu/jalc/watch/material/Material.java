@@ -27,4 +27,8 @@ public class Material{
     this.materialcolor = materialcolor;
     return this.materialcolor;
   }
+
+  public void detach(){System.out.println("Detach watch");}
+
+  public void attach(){System.out.println("Attach watch");}
 }
