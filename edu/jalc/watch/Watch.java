@@ -6,8 +6,10 @@ import edu.jalc.watch.display.DisplayType;
 import edu.jalc.watch.material.Material;
 import edu.jalc.watch.material.MaterialType;
 import edu.jalc.watch.material.MaterialColor;
+import edu.jalc.watch.interfaces.Settable;
+import edu.jalc.watch.interfaces.Trackable;
 
-class Watch{
+class Watch implements Settable, Trackable{
 
   private final double time;
   private Display display;
@@ -45,5 +47,9 @@ class Watch{
     this.material = material;
     return this.material;
   }
+
+  public void set(int time){System.out.println("Set time to " + time + ":00");}
+
+  public void track(){System.out.println("Start stopwatch");}
 
 }
