@@ -1,4 +1,4 @@
-package edu.jalc.watch;
+package edu.jalc.watch.builderpattern;
 
 public class RolexWatchBuilder implements WatchBuilderInterface {
 	
@@ -10,47 +10,38 @@ public class RolexWatchBuilder implements WatchBuilderInterface {
 	
 
 	public RolexWatchBuilder() {
-		super();
 		this.rubberBand = null;
 		this.metalBand = null;
 		this.digitalFace = null;
 		this.analogFace = null;
 	}
 
-	public RolexWatchBuilder(String rubberBand, String metalBand, String digitalFace, String analogFace) {
-		super();
-		this.rubberBand = rubberBand;
-		this.metalBand = metalBand;
-		this.digitalFace = digitalFace;
-		this.analogFace = analogFace;
-	}
-
 	@Override
-	public RolexWatchBuilder usesRubberBand(String rubberBand) {
-		this.rubberBand = rubberBand;
+	public RolexWatchBuilder usesRubberBand() {
+		this.rubberBand = "High end rubber band";
 		return this;
 	}
 
 	@Override
-	public RolexWatchBuilder usesMetalBand(String metalBand) {
-		this.metalBand = metalBand;
+	public RolexWatchBuilder usesMetalBand() {
+		this.metalBand = "High end metal band";
 		return this;
 	}
 
 	@Override
-	public RolexWatchBuilder hasDigitalFace(String digitalFace) {
-		this.digitalFace = digitalFace;
+	public RolexWatchBuilder hasDigitalFace() {
+		this.digitalFace = "Has digial face";
 		return this;
 	}
 
 	@Override
-	public RolexWatchBuilder hasAnalogFace(String analogFace) {
-		this.analogFace = analogFace;
+	public RolexWatchBuilder hasAnalogFace() {
+		this.analogFace = "Has analog face";
 		return this;
 	}
 
 	@Override
-	public RolexWatch getRolexWatch() {
+	public RolexWatch build() {
 		return new RolexWatch(rubberBand, metalBand, digitalFace, analogFace);
 	}
 

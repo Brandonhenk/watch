@@ -1,15 +1,15 @@
-package edu.jalc.watch;
+package edu.jalc.watch.builderpattern;
 
 public interface WatchBuilderInterface {
 	
-	public RolexWatchBuilder usesRubberBand(String rubberBand);
+	public WatchBuilderInterface usesRubberBand();
 	
-	public RolexWatchBuilder usesMetalBand(String metalBand);
+	public WatchBuilderInterface usesMetalBand();
 	
-	public RolexWatchBuilder hasDigitalFace(String digialFace);
+	public WatchBuilderInterface hasDigitalFace();
 	
-	public RolexWatchBuilder hasAnalogFace(String analogFace);
+	public WatchBuilderInterface hasAnalogFace();
 	
-	public RolexWatch getRolexWatch();
+	public RolexWatch build();
 	
 }

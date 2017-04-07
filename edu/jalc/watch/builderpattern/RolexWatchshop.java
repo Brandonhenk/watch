@@ -1,10 +1,12 @@
-package edu.jalc.watch;
+package edu.jalc.watch.builderpattern;
 
 public class RolexWatchshop {
 
 	public static void main(String[] args) {
 		
-		RolexWatch rWB = new RolexWatchBuilder().usesMetalBand("Rolex with metal band").hasAnalogFace("Rolex with Analog display").getRolexWatch();
+		RolexWatch rWB = new RolexWatchBuilder()
+				.usesRubberBand()
+				.hasAnalogFace().build();
 		
 		System.out.println(rWB);
 	}

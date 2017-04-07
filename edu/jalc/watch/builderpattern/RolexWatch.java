@@ -1,4 +1,4 @@
-package edu.jalc.watch;
+package edu.jalc.watch.builderpattern;
 
 public class RolexWatch{
 	private String rubberBand;
